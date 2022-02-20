@@ -1,0 +1,39 @@
+﻿1. List 5 difference between Browser JS(console) v Nodejs
+Ans) Node js :
+. Node doesn’t have a predefined “window” object because it doesn’t have a window to draw anything.
+* “location” object is related to a particular url; that means it is for page specific. So, node doesn’t require that.
+* Ofcourse Node doesn’t have a “document” object also, because it never has to render anything in a page.
+* Node has “global”, which is a predefined global object. It contains several functions that are not available in browsers, because they are needed for server side work only.
+* “require” object is predefined in Node which is used to include modules in the app.
+In Node everything is a module. You must keep your code inside a module.
+Browser js(Console) :
+* “window” is a predefined global object which has functions and attributes that have to deal with the window that has been drawn.
+* “location” is another predefined object in browsers, that has all the information about the url we have loaded.
+* “document”, which is also another predefined global variable in browsers, has the html which is rendered.
+* Browsers may have an object named “global”, but it will be the exact one as “window”.
+* Browsers don’t have “require” predefined. You may include it in your app for asynchronous file loading.
+* Moduling is not mandatory in client side JavaScript, i.e. in browsers.
+2. watch & summary 5 points - https://www.youtube.com/watch?v=SmE4OwHztCc&ab_channel=JSConf
+Ans: Rendering includes Parsing, layout, painting etc.
+1. In high level flow, we have got sort of two processes, one will parse the HTML, One the CSS, then combined to the frame tree depending on which browser you look at it.
+2. Layout the render tree, it will put it when you have absolute position it will know to do all of that and then painting is the operation of drawing the graphics.
+3. Few things about parsing of HTML are bit different: HTML for give by nature, parsing isn’t straight forward, can be halted, will do speculative parsing, it’s reentrant.
+4. Create a parse tree, that will then create the DOM tree which we all interact.
+5. Speculative parsing will look ahead, external images, scripts, and CSS. Reentrant means the parsing process can be interrupted.
+6. So the render tree is actually multiple trees, there are like four of them: Render Objects, Render Styles, Render Layers, Line Boxes.
+3 )  To read - https://stackoverflow.com/questions/5641997/is-it-necessary-to-write-head-body-and-html-tags
+
+
+Ans)  Requires.
+Omitting the html, head, and body tags is certainly allowed by the HTML specs. The underlying reason is that browsers have always sought to be consistent with existing web pages, and the very early versions of HTML didn't define those elements. When HTML 2.0 first did, it was done in a way that the tags would be inferred when missing.
+often find it convenient to omit the tags when prototyping and especially when writing test cases as it helps keep the mark-up focused on the test in question. 
+
+
+4) Execute the below code and write your description in txt file
+
+
+Ans)  https://gist.github.com/1aravi/ec539d3d0d4b9f0669f17e49d5a3cb5c
+
+
+5 ) Read what is prototype
+Ans ):  The prototype is an object that is associated with every function and object by default in JavaScript, where the function's prototype property is accessible and modifiable and the object's prototype property (aka attribute) is not visible. ... Every function includes a prototype object by default.
